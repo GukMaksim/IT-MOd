@@ -1,26 +1,12 @@
+@import 'settings/reset';
 @import 'settings/mixins';
 @import 'settings/variables';
-//@import 'fonts';
+@import 'fonts';
+
+@import 'template/common';
 
 @import 'template/header';
 @import 'template/main';
 @import 'template/footer';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #fff;
-  font-size: 14px;
-  line-height: 1.2;
-  color: $main-color-text;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}

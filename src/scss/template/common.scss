@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $txt-main;
+  font-family: OpenSans, sans-serif;
+  font-size: 1.25rem;
+  background: $background;
+}
+
+/* ----------------- */
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------- */
+[class*="__container"] {
+  max-width: 73.75rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background: $green;
+  transition: all 0.3s;
+  color: $white;
+
+  &:hover {
+    background: $green-hover;
+  }
+}
+
+/*
+a {
+  text-decoration: none;
+  cursor: pointer;
+}*/

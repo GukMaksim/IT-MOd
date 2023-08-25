@@ -1,5 +1,34 @@
-$main-color-text: #4e4e4e;
-$second-color-text: #b9b9b9;
-$third-color-text: #7c7c7c;
+// for mixin
+$minWidth: 360;
+$maxWidth: 1440;
+$maxWidthContainer: 1180;
 
-$active-color-menu: #57a4a4;
+// for @media
+// $sm-min-content: 320px;
+// $sm-max-content: 480.99px;
+// $md-min-content: 481px;
+// $md-max-content: 991.98px; // tablet max-width
+// $lg-min-content: 993px;
+// $lg-max-content: 1200px;
+
+
+//-----------ХЗ
+$sm-max-width: 479.98px; // small size max-width
+$md-max-width: 767.98px; // medium size max-width
+$lg-max-width: 991.98px; // large size max-width
+
+// for CSS
+// $base-font-size: 1.4rem;
+// $base-line-height: 1.2;
+
+//-----COLORS
+$green: #7CAB53;
+$green-hover: #297330;
+$blue: #125AA2;
+$gray-input: #CFCDCD;
+$gray-background: #3B4146;
+$background: #F5F5F5;
+$txt-main: #383B4C;
+$txt-input: #AAA9A9;
+$white: #FDFDFD;
+

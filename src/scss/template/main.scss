@@ -1,0 +1,224 @@
+// ----------- Hero
+
+.hero {
+  position: relative;
+  background-image: url('../../img/hero/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // width: 100%;
+  // height: 100%;
+  background: rgba(28, 36, 44, 0.9);
+  z-index: 2;
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 120%;
+    padding-top: 8.5rem;
+    padding-bottom: 2rem;
+    max-width: 67.5rem;
+
+    span {
+      color:$green;
+    }
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: 1.5rem;
+    line-height: normal;
+    padding-bottom: 4rem;
+  }
+}
+
+.social-icons {
+  padding-top: 154px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.telegram {
+  width: 36px;
+  height: 36px;
+  stroke: $white;
+
+  &:hover {
+    /* width: 46px;
+    height: 46px; */
+    stroke: $blue;
+    transform: scale(1.4);
+  }
+}
+
+.whatsapp,
+.viber {
+  width: 40px;
+  height: 40px;
+  fill: $white;
+
+  &:hover {
+    /* width: 50px;
+    height: 50px; */
+    fill: $blue;
+    transform: scale(1.4);
+  }
+}
+
+// ----------- About Us
+
+.about{
+  
+  &__container {
+  padding: 72px 0;
+  display: flex;
+  align-items: center;
+  }
+
+  &__image {
+    width: 480px;
+    height: 329px;
+  }
+
+  &__content {
+    padding-left: 20px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    padding-bottom: 32px;
+  }
+
+  &__text {
+    line-height: 150%;
+    letter-spacing: 0.2px;
+  }
+}
+
+// ----------- Services
+
+.services {
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 27px 0 48px 0;
+  }
+
+  &__card {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.row {  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "soft complex"
+    "soft hard";
+
+    &__complex { 
+      grid-area: complex; 
+      height: 294px;
+    }
+    &__soft { 
+      grid-area: soft; 
+      height: 504px;
+    }
+    &__hard { 
+      grid-area: hard;
+      height: 190px; 
+    }
+  }
+
+  .card-active {
+    display: flex;
+    height: 100%;
+
+    &-complex {
+      flex-direction: row-reverse;
+    }
+    &-soft {
+      flex-direction: column;
+    }
+    &-hard {
+      flex-direction: row;
+    }
+  }
+
+  .card-inactive {
+    display: none;
+    height: 100%;
+  }
+
+  .card__header {
+    background: $green;
+    color: $white;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+    padding: 16px;
+
+    &-complex {
+      padding-left: 32px;
+    }
+    &-soft {
+      padding-top: 46px;
+      padding-bottom: 46px;
+      border-radius: 0 8px 0 0;
+    }
+    &-hard {
+      border-radius: 8px 0 0 8px;
+    }
+  }
+
+  .card__image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    &-complex {
+      background-image: url('../../img/services/complex.jpeg');
+      border-radius: 8px 0 0 8px;
+    }
+    &-soft {
+      background-image: url('../../img/services/soft.jpeg');  
+      border-radius: 0 0 8px 0;
+    }
+    &-hard {
+      background-image: url('../../img/services/hard.jpeg');
+    }
+  }
