@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: $background;
 
   &__container {
     display: flex;
@@ -10,7 +16,10 @@
     min-height: 4.875rem;
   }
 
-  &__logo {}
+  &__logo {
+    position: relative;
+    z-index: 5;
+  }
 
   &__menu {}
 
@@ -25,17 +34,50 @@
     &:hover {
       font-weight: 600;
     }
+    @media(max-width: $md-max-width) {
+      display: none;
+    }
   }
 }
 
 .menu {
 
+  &__body {
+    @media (max-width: $md-max-width) {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 153px;
+      overflow: auto;
+      transition: right 0.3s ease 0s;
+      background-color: #fff;
+      padding: 75px 0 0 0;
+      border-radius: 8px;
+      
+      .menu-open & {
+        right: 0;
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    row-gap: 0.3125rem;
-    column-gap: 1.5rem;
+    @media (min-width: $md-max-width) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 0.3125rem;
+      column-gap: 1.5rem;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    @media (max-width: $md-max-width) {
+      margin-bottom: 24px;
+    }
   }
 
   &__link {
@@ -64,4 +106,64 @@
   }
 
   &__item {}
+}
+
+// Burger
+.icon-menu {
+  display: none;
+  background-color: transparent;
+  @media(max-width: $md-max-width) {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 18px;
+    flex: 0 0 1.5rem;
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: 0.125rem;
+      background-color: $green;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - 0.0625rem);
+    }
+    .menu-open & {
+      margin-right: 100px;
+      span {
+        width: 0;
+      }
+      &::before {
+        top: calc(50% - 0.0625rem);
+        transform: rotate(-45deg);
+        background-color: $txt-main;
+      }
+      &::after {
+        bottom: calc(50% - 0.0625rem);
+        transform: rotate(45deg);
+        background-color: $txt-main;
+      }
+      .icon-menu__title {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 120%;
+    margin: 20px 0 0 0;
+  }
 }
