@@ -15,6 +15,20 @@ body {
   background: $background;
 }
 
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &-center {
+    text-align: center;
+  }
+  &-white {
+    color: $white;
+  }
+}
+
 .hidden {
   display: none !important;
 }

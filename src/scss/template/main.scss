@@ -2,19 +2,19 @@
 
 .hero {
   position: relative;
-  background-image: url('../../img/hero/hero-background.jpg');
+  background-image: url("../../img/hero/hero-background.jpg");
   background-size: cover;
   background-position: center;
 
   &::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(28, 36, 44, 0.9);
-  z-index: 2;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28, 36, 44, 0.9);
+    z-index: 2;
   }
 
   &-inner {
@@ -32,7 +32,7 @@
     max-width: 67.5rem;
 
     span {
-      color:$green;
+      color: $green;
     }
   }
 
@@ -58,8 +58,6 @@
   stroke: $white;
 
   &:hover {
-    /* width: 46px;
-    height: 46px; */
     stroke: $blue;
     transform: scale(1.4);
   }
@@ -72,8 +70,6 @@
   fill: $white;
 
   &:hover {
-    /* width: 50px;
-    height: 50px; */
     fill: $blue;
     transform: scale(1.4);
   }
@@ -81,12 +77,15 @@
 
 // ----------- About Us
 
-.about{
-  
+.about {
+  &__title {
+    padding-bottom: 32px;
+  }
+
   &__container {
-  padding: 72px 0;
-  display: flex;
-  align-items: center;
+    padding: 72px 0;
+    display: flex;
+    align-items: center;
   }
 
   &__image {
@@ -98,14 +97,6 @@
     padding-left: 20px;
   }
 
-  &__title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 120%;
-    text-transform: uppercase;
-    padding-bottom: 32px;
-  }
-
   &__text {
     line-height: 150%;
     letter-spacing: 0.2px;
@@ -115,135 +106,231 @@
 // ----------- Services
 
 .services {
-
+  padding-top: 27px;
   &__title {
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 120%;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 27px 0 48px 0;
+    padding-bottom: 48px;
   }
 
   &__card {
     height: 100%;
     width: 100%;
   }
-}
 
-.row {  
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px 20px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "soft complex"
-    "soft hard";
+  .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "soft complex"
+      "soft hard";
 
-    &__complex { 
-      grid-area: complex; 
+    &__complex {
+      grid-area: complex;
       height: 294px;
     }
-    &__soft { 
-      grid-area: soft; 
+    &__soft {
+      grid-area: soft;
       height: 504px;
     }
-    &__hard { 
+    &__hard {
       grid-area: hard;
-      height: 190px; 
+      height: 190px;
     }
   }
+}
 
-  .card-face {
-    display: flex;
-    height: 100%;
+.card-face {
+  display: flex;
+  height: 100%;
 
-    &-complex {
-      flex-direction: row-reverse;
-    }
-    &-soft {
-      flex-direction: column;
-    }
-    &-hard {
-      flex-direction: row;
-    }
+  &-complex {
+    flex-direction: row-reverse;
   }
-
-  .card-back {
-    height: 100%;
-    display: flex;
+  &-soft {
     flex-direction: column;
-    align-items: center;
-    padding: 0 8px 0 32px;
-    border: 1px solid;
-    border-radius: 8px;
-    border-color: $green;
-
-    &-complex,
-    &-hard {
-      border-right: none;
-    }
-    &-soft {
-      border-left: none;
-    }
   }
-
-  .card__list {
-
-    &-item {
-      color: #000;
-      font-size: 16px;
-      line-height: 140%;
-      padding: 12px 8px;
-      display: flex;
-      column-gap: 16px;
-    }
+  &-hard {
+    flex-direction: row;
   }
+}
 
-  .card__header {
-    background: $green;
-    color: $white;
-    font-weight: 700;
-    line-height: 120%;
-    text-transform: uppercase;
+.card-back {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 8px 12px 32px;
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: $green;
+
+  &-complex,
+  &-hard {
+    border-right: none;
+  }
+  &-soft {
+    border-left: none;
+    padding-left: 130px;
+  }
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &-item {
+    color: #000;
+    font-size: 16px;
+    line-height: 140%;
+    // padding: 12px 8px;
     display: flex;
+    column-gap: 16px;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.card__header {
+  background: $green;
+  color: $white;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 16px;
+  padding: 16px;
+
+  &-complex {
+    padding-left: 32px;
+  }
+  &-soft {
+    padding-top: 46px;
+    padding-bottom: 46px;
+    border-radius: 0 8px 0 0;
+  }
+  &-hard {
+    border-radius: 8px 0 0 8px;
+  }
+}
+
+.card__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &-complex {
+    background-image: url("../../img/services/complex.jpeg");
+    border-radius: 8px 0 0 8px;
+  }
+  &-soft {
+    background-image: url("../../img/services/soft.jpeg");
+    border-radius: 0 0 8px 0;
+  }
+  &-hard {
+    background-image: url("../../img/services/hard.jpeg");
+  }
+}
+
+// ----------- Customers
+
+.customers {
+  padding: 72px 0;
+  background-color: $white;
+
+  &__title {
+    padding-bottom: 32px;
+  }
+  &__list {
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+  }
+  &__item {
+    padding: 8px;
+  }
+}
+
+// ----------- Advantages
+
+.advantages {
+  position: relative;
+  background-image: url("../../img/hero/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28, 36, 44, 0.9);
+    z-index: 2;
+  }
+  &-inner {
+    position: relative;
+    z-index: 3;
+  }
+  &__title {
+    color: $white;
+    padding-top: 82px;
+    padding-bottom: 48px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 125px;
+    row-gap: 48px;
+  }
+  &__item {
+    width: 380px;
+    display: inline-flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 10px;
+  }
+  &__image {
+    width: 45px;
+    height: 45px;
+  }
+  &__text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+    color: $white;
+  }
+}
+
+// ----------- Partners
+
+.partners {
+  &__container {
+    padding: 72px 0;
+  }
+  &__title {
+    padding-bottom: 48px;
+  }
+  &__list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 12px;
     column-gap: 16px;
-    padding: 16px;
-
-    &-complex {
-      padding-left: 32px;
-    }
-    &-soft {
-      padding-top: 46px;
-      padding-bottom: 46px;
-      border-radius: 0 8px 0 0;
-    }
-    &-hard {
-      border-radius: 8px 0 0 8px;
-    }
+    row-gap: 16px;
   }
-
-  .card__image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    
-    &-complex {
-      background-image: url('../../img/services/complex.jpeg');
-      border-radius: 8px 0 0 8px;
-    }
-    &-soft {
-      background-image: url('../../img/services/soft.jpeg');  
-      border-radius: 0 0 8px 0;
-    }
-    &-hard {
-      background-image: url('../../img/services/hard.jpeg');
-    }
+  &__item {
   }
-  
+}
