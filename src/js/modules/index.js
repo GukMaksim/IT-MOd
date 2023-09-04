@@ -1,6 +1,7 @@
 import toggleBodyLock from './../helpers/toggleBodyLock.js'
 import { html, firstScreen, header, burgerButton } from './../helpers/elementsNodeList.js'
 import { cardsModule } from './cardsModule.js'
+import { openModal, closeModal } from './modalModule.js'
 
 // FLS (Full Logging System) =================================================================================================================
 function FLS(message) {
@@ -135,8 +136,24 @@ const menuClose = () => {
   html.classList.remove('menu-open')
 }
 
+function modalInit() {
+  const openModalButton = document.querySelector('.openModalButton');
+
+  openModalButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    openModal();
+  });
+  document.querySelector('.closeModalButton').addEventListener('click', function (e) {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    closeModal();
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   cardsModule();
+  modalInit();
 });
 
 export {
