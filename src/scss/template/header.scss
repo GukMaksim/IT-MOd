@@ -108,6 +108,7 @@
 			background-color: $blue;
 		}
 
+		&:active::after,
 		&.active::after,
 		&:hover::after {
 			width: 100%;

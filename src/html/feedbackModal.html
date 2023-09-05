@@ -1,8 +1,8 @@
 <div
 	id="feedbackModal"
-	class="modal">
-	<div class="modal-content">
-		<span class="close closeModalButton">&times;</span>
+	class="modal modal-feedback">
+	<div class="modal__content">
+		<span class="close closeFeedbackButton">&times;</span>
 		<div class="modal__inner">
 			<img
 				src="@img/modal/icon_yes.png"
@@ -11,6 +11,43 @@
 			<p class="modal__message">
 				Наш менеджер звʼяжеться з Вами у найближчий час
 			</p>
+		</div>
+	</div>
+</div>
+
+<div
+	id="wrightToUsModal"
+	class="modal modal-wright">
+	<div class="modal__content">
+		<span class="close closeWrightToUsButton">&times;</span>
+		<div class="modal__inner">
+			<form class="wright__form form">
+				<input
+					type="text"
+					id="wright-name"
+					name="name"
+					placeholder="Ваше імʼя*"
+					required />
+				<input
+					type="email"
+					id="wright-email"
+					name="email"
+					placeholder="Email*"
+					required
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+				<input
+					type="tel"
+					id="wright-phone"
+					name="phone"
+					placeholder="Телефон*"
+					required
+					pattern="[0-9]{10}" />
+				<button
+					class="openFeedbackButton2 button"
+					type="submit">
+					Надіслати
+				</button>
+			</form>
 		</div>
 	</div>
 </div>
