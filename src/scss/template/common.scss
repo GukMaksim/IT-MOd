@@ -11,7 +11,7 @@ html {
 body {
 	color: $txt-main;
 	font-family: OpenSans, sans-serif;
-	font-size: 1.25rem;
+	font-size: 20px;
 	background: $background;
 }
 
@@ -44,9 +44,9 @@ body {
 
 /* ----------------- */
 [class*='__container'] {
-	max-width: 73.75rem;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+	max-width: 1180px;
+	padding-left: 15px;
+	padding-right: 15px;
 	margin: 0 auto;
 }
 
@@ -72,8 +72,8 @@ main {
 }
 
 .button {
-	padding: 1rem 2rem;
-	border-radius: 0.5rem;
+	padding: 16px 32px;
+	border-radius: 8px;
 	background: $green;
 	transition: all 0.3s;
 	color: $white;

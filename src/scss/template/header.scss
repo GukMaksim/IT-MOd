@@ -10,7 +10,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 0.9375rem;
+		gap: 15px;
 		// padding-top: 1rem;
 		// padding-bottom: 1rem;
 		@include adaptiv-value('padding-top', 16, 32);
@@ -29,7 +29,7 @@
 
 	&__phone {
 		color: $blue;
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: normal;
 		// padding: 12px 24px;
@@ -56,12 +56,12 @@
 			position: fixed;
 			top: 0;
 			right: -100%;
-			width: 9.5625rem;
+			width: 153px;
 			overflow: auto;
 			transition: right 0.3s ease 0s;
 			background-color: #fff;
-			padding: 4.6875rem 0 0 0;
-			border-radius: 0.5rem;
+			padding: 75px 0 0 0;
+			border-radius: 8px;
 
 			.menu-open & {
 				right: 0;
@@ -77,8 +77,8 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			row-gap: 0.3125rem;
-			column-gap: 1.5rem;
+			row-gap: 5px;
+			column-gap: 24px;
 			justify-content: space-evenly;
 		}
 	}
@@ -86,12 +86,12 @@
 	&__item {
 		text-align: center;
 		@media (max-width: $sm-max-width) {
-			margin-bottom: 1.5rem;
+			margin-bottom: 24px;
 		}
 	}
 
 	&__link {
-		font-size: 1rem;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: normal;
 		display: inline-block;
@@ -103,7 +103,7 @@
 			bottom: 0;
 			left: 50%;
 			width: 0;
-			height: 0.125rem;
+			height: 2px;
 			transition: all 0.3s;
 			background-color: $blue;
 		}
@@ -127,9 +127,9 @@
 	@media (max-width: $sm-max-width) {
 		display: block;
 		position: relative;
-		width: 2.25rem;
-		height: 1.125rem;
-		flex: 0 0 1.5rem;
+		width: 36px;
+		height: 18px;
+		flex: 0 0 24px;
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -140,7 +140,7 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: 0.125rem;
+			height: 2px;
 			background-color: $green;
 		}
 		&::before {
@@ -150,7 +150,7 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - 0.0625rem);
+			top: calc(50% - 1px);
 		}
 		.menu-open & {
 			margin-right: 100px;
@@ -158,12 +158,12 @@
 				width: 0;
 			}
 			&::before {
-				top: calc(50% - 0.0625rem);
+				top: calc(50% - 1px);
 				transform: rotate(-45deg);
 				background-color: $txt-main;
 			}
 			&::after {
-				bottom: calc(50% - 0.0625rem);
+				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
 				background-color: $txt-main;
 			}
@@ -173,9 +173,9 @@
 		}
 	}
 	&__title {
-		font-size: 0.75rem;
+		font-size: 12px;
 		font-weight: 600;
 		line-height: 120%;
-		margin: 1.25rem 0 0 0;
+		margin: 20px 0 0 0;
 	}
 }

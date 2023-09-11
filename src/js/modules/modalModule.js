@@ -10,8 +10,10 @@ function openWrightToUsModal() {
 function closeWrightToUsModal() {
   wrightToUsModal.style.display = 'none';
   document.getElementById('wright-name').value = '';
-  document.getElementById('wright-phone').value = '';
+  document.getElementById('wright-company').value = '';
   document.getElementById('wright-email').value = '';
+  document.getElementById('wright-phone').value = '';
+  document.getElementById('wright-message').value = '';
 }
 
 // Відкриття модального вікна "feedbackModal"

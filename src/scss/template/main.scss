@@ -31,7 +31,7 @@
 		@include adaptiv-value('padding-top', 212, 236);
 		// padding-bottom: 2rem;
 		@include adaptiv-value('padding-bottom', 32, 56);
-		max-width: 67.5rem;
+		max-width: 1080px;
 
 		span {
 			color: $green;
@@ -364,6 +364,7 @@
 	}
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: end;
 		justify-content: space-evenly;
 	}
@@ -402,6 +403,8 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
 		padding-bottom: 125px;
 		row-gap: 48px;
 	}
@@ -431,10 +434,12 @@
 .partners {
 	background-color: $white;
 	&__container {
-		padding: 72px 0;
+		// padding: 72px 0;
 	}
 	&__title {
-		padding-bottom: 48px;
+		// padding-bottom: 48px;
+		@include adaptiv-value('padding-top', 72, 24);
+		@include adaptiv-value('padding-bottom', 48, 16);
 	}
 	&__list {
 		display: inline-flex;
@@ -444,6 +449,7 @@
 		padding: 0 12px;
 		column-gap: 16px;
 		row-gap: 16px;
+		@include adaptiv-value('padding-bottom', 72, 24);
 	}
 }
 
@@ -478,6 +484,18 @@
 			&:focus-visible {
 				border-color: $blue;
 			}
+			@media (max-width: $md-max-width) {
+				margin: 0 auto;
+				max-width: 458px;
+				width: 100%;
+				&:last-of-type {
+					margin-bottom: 32px;
+				}
+			}
+		}
+		@media (max-width: $md-max-width) {
+			flex-direction: column;
+			row-gap: 12px;
 		}
 	}
 }
@@ -495,24 +513,35 @@
 		padding-top: 194px;
 	}
 	&__info {
-		width: 280px;
-		padding: 32px;
-		// margin-top: 194px;
+		// width: 280px;
+		@include adaptiv-value('width', 280, 156);
+		// padding: 32px;
+		@include adaptiv-value('padding-top', 32, 16);
+		@include adaptiv-value('padding-bottom', 32, 16);
+		@include adaptiv-value('padding-left', 32, 8);
+		@include adaptiv-value('padding-right', 32, 8);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		gap: 32px;
+		@include adaptiv-value('gap', 32, 16);
 		border-radius: 8px 9px 0 0;
 		background-color: $green;
 		backdrop-filter: blur(2px);
 		color: $white;
-		font-size: 16px;
+		@include adaptiv-value('font-size', 16, 12);
+		// font-size: 16px;
 		line-height: 120%;
 	}
 	&__links {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+	}
+	&__icons {
+		@media (max-width: $sm-max-width) {
+			display: none;
+		}
 	}
 	&__icons a img {
 		border-radius: 50%;

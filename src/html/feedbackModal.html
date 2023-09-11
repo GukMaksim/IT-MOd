@@ -21,16 +21,26 @@
 	<div class="modal__content">
 		<span class="close closeWrightToUsButton">&times;</span>
 		<div class="modal__inner">
+			<p class="modal__title modal__title-wright">Звʼяжіться з нами</p>
 			<form class="wright__form form">
 				<input
 					type="text"
 					id="wright-name"
+					class="form__item form__item-name"
 					name="name"
 					placeholder="Ваше імʼя*"
 					required />
 				<input
+					type="text"
+					id="wright-company"
+					class="form__item form__item-company"
+					name="name"
+					placeholder="Назва компанії*"
+					required />
+				<input
 					type="email"
 					id="wright-email"
+					class="form__item form__item-email"
 					name="email"
 					placeholder="Email*"
 					required
@@ -38,10 +48,19 @@
 				<input
 					type="tel"
 					id="wright-phone"
+					class="form__item form__item-phone"
 					name="phone"
 					placeholder="Телефон*"
 					required
 					pattern="[0-9]{10}" />
+				<textarea
+					name=""
+					id="wright-message"
+					class="form__item form__item-message"
+					placeholder="Текст повідомлення"
+					cols="30"
+					rows="2"></textarea>
+				<!-- <input type="" id="wright-message" name="name" placeholder="Текст повідомлення" required /> -->
 				<button
 					class="openFeedbackButton2 button"
 					type="submit">
