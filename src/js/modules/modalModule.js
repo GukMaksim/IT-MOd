@@ -41,9 +41,6 @@ function modalInit() {
     openWrightToUsModal();
   });
   document.querySelector('.closeWrightToUsButton').addEventListener('click', function (e) {
-    // document.getElementById('wright-name').value = '';
-    // document.getElementById('wright-phone').value = '';
-    // document.getElementById('wright-email').value = '';
     closeWrightToUsModal();
   });
 
@@ -54,16 +51,10 @@ function modalInit() {
 
   openFeedbackButton2.addEventListener('click', function (e) {
     e.preventDefault();
-    // document.getElementById('wright-name').value = '';
-    // document.getElementById('wright-phone').value = '';
-    // document.getElementById('wright-email').value = '';
     closeWrightToUsModal();
     openFeedbackModal();
   });
   document.querySelector('.closeFeedbackButton').addEventListener('click', function (e) {
-    // document.getElementById('name').value = '';
-    // document.getElementById('email').value = '';
-    // document.getElementById('phone').value = '';
     closeFeedbackModal();
   });
 }

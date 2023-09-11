@@ -27,9 +27,7 @@
 		@include adaptiv-value('font-size', 50, 24, 1);
 		font-weight: 700;
 		line-height: 120%;
-		// padding-top: 8.5rem;
 		@include adaptiv-value('padding-top', 212, 236);
-		// padding-bottom: 2rem;
 		@include adaptiv-value('padding-bottom', 32, 56);
 		max-width: 1080px;
 
@@ -40,18 +38,14 @@
 
 	&__subtitle {
 		color: $white;
-		// font-size: 1.5rem;
 		@include adaptiv-value('font-size', 24, 16);
 		line-height: normal;
-		// padding-bottom: 64px;
 		@include adaptiv-value('padding-bottom', 64, 72);
 	}
 }
 
 .social-icons {
-	// padding-top: 170px;
 	@include adaptiv-value('padding-top', 170, 156);
-	// padding-bottom: 100px;
 	@include adaptiv-value('padding-bottom', 100, 42);
 	display: flex;
 	justify-content: flex-end;
@@ -85,7 +79,6 @@
 
 .about {
 	&__title {
-		// padding-bottom: 32px;
 		@include adaptiv-value('padding-bottom', 32, 16);
 		@media (max-width: $sm-max-width) {
 			text-align: center;
@@ -93,7 +86,6 @@
 	}
 
 	&__content {
-		// padding: 72px 0;
 		@include adaptiv-value('padding-top', 72, 24);
 		@include adaptiv-value('padding-bottom', 72, 24);
 		display: flex;
@@ -120,14 +112,12 @@
 		@media (max-width: $sm-max-width) {
 			width: 100%;
 		}
-		// padding-left: 20px;
 	}
 
 	&__text {
 		@include adaptiv-value('font-size', 20, 14);
 		@include adaptiv-value('letter-spacing', 0.2, 0.14);
 		line-height: 150%;
-		// letter-spacing: 0.2px;
 		@media (max-width: $sm-max-width) {
 			padding-bottom: 32px;
 		}
@@ -160,7 +150,6 @@
 	.row {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		// grid-template-rows: repeat(2, 1fr);
 		gap: 20px 20px;
 		grid-auto-flow: row;
 		grid-template-areas:
@@ -199,7 +188,6 @@
 		}
 		@media (max-width: $md-max-width) {
 			grid-template-columns: 1fr;
-			// grid-template-rows: repeat(3, 1fr);
 			grid-auto-flow: column;
 			grid-template-areas:
 				'complex'
@@ -249,7 +237,6 @@
 	}
 	&-soft {
 		border-left: none;
-		// padding-left: 130px;
 	}
 	@media (max-width: $sm-max-width) {
 		border: none;
@@ -266,7 +253,6 @@
 		color: #000;
 		font-size: 16px;
 		line-height: 140%;
-		// padding: 12px 8px;
 		display: flex;
 		align-items: center;
 		column-gap: 16px;
@@ -434,10 +420,8 @@
 .partners {
 	background-color: $white;
 	&__container {
-		// padding: 72px 0;
 	}
 	&__title {
-		// padding-bottom: 48px;
 		@include adaptiv-value('padding-top', 72, 24);
 		@include adaptiv-value('padding-bottom', 48, 16);
 	}
@@ -513,9 +497,7 @@
 		padding-top: 194px;
 	}
 	&__info {
-		// width: 280px;
 		@include adaptiv-value('width', 280, 156);
-		// padding: 32px;
 		@include adaptiv-value('padding-top', 32, 16);
 		@include adaptiv-value('padding-bottom', 32, 16);
 		@include adaptiv-value('padding-left', 32, 8);
@@ -530,7 +512,6 @@
 		backdrop-filter: blur(2px);
 		color: $white;
 		@include adaptiv-value('font-size', 16, 12);
-		// font-size: 16px;
 		line-height: 120%;
 	}
 	&__links {

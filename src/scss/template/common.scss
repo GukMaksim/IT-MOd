@@ -16,7 +16,6 @@ body {
 }
 
 .title {
-	// font-size: 36px;
 	@include adaptiv-value('font-size', 36, 16);
 	font-weight: 700;
 	line-height: 120%;
