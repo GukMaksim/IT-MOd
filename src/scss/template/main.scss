@@ -419,8 +419,8 @@
 
 .partners {
 	background-color: $white;
-	&__container {
-	}
+	// &__container {
+	// }
 	&__title {
 		@include adaptiv-value('padding-top', 72, 24);
 		@include adaptiv-value('padding-bottom', 48, 16);
